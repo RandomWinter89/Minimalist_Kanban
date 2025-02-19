@@ -13,11 +13,11 @@ const Navbar = () => {
 	return (
 		<>
 			<div className="flex justify-between w-full p-4 border-b-2"> 
-				<Link to="/Minimalist_Kanban" className="p-2 font-bold rounded hover:bg-orange-500">Minimalist Kanban</Link>
+				<Link to="/" className="p-2 font-bold rounded hover:bg-orange-500">Minimalist Kanban</Link>
 				
 				<div className="flex gap-2">
-					{token && <Link className="p-2 font-bold rounded hover:bg-orange-500" to="/Minimalist_Kanban/dashboard">dashboard</Link>}
-					{!token && <Link className="p-2 font-bold rounded hover:bg-orange-500" to="/Minimalist_Kanban/login">login</Link>}
+					{token && <Link className="p-2 font-bold rounded hover:bg-orange-500" to="/dashboard">dashboard</Link>}
+					{!token && <Link className="p-2 font-bold rounded hover:bg-orange-500" to="/login">login</Link>}
 					{token && <button className="p-2 font-bold rounded hover:bg-orange-500" onClick={HandleLogout}>Logout</button>}
 				</div>
 			</div>

@@ -19,18 +19,22 @@ function App() {
   return (
     <AuthContext.Provider value={{ token, setToken }}>
       <HashRouter>
+        <Navbar />
         <Routes>
-          <Route path="/Minimalist_Kanban" element={<Navbar/>}>
-            <Route index element={<Home/>}/>
-            <Route element={<Login/>} path="/Minimalist_Kanban/login" />
+          {/* <Route path="/Minimalist_Kanban" element={<Navbar/>}> */}
+          
+            {/* <Route index element={<Home/>}/> */}
+            <Route path="/" element={<Home />}/>
+            <Route element={<Login/>} path="/login" />
             <Route element={
                 <RequireAuth>
                   <Board/>
                 </RequireAuth>
               }
-              path="/Minimalist_Kanban/dashboard"
+              // /Minimalist_Kanban
+              path="/dashboard"
             />
-          </Route>
+          {/* </Route> */}
         </Routes>
       </HashRouter>
     </AuthContext.Provider>

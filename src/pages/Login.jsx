@@ -15,7 +15,7 @@ const Login = () => {
 		
 		if (isCorrectUsername && isCorrectPassword) {
 			authContext.setToken("1234");
-			navigate("/Minimalist_Kanban/dashboard");
+			navigate("/dashboard");
 		}
 	}
 	

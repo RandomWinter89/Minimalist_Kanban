@@ -5,8 +5,9 @@ import { AuthContext } from "../context/AuthContext";
 export default function RequireAuth( { children } ) {
 	const token = useContext(AuthContext).token;
 	
+	// /Minimalist_Kanban
 	if (!token) {
-		return <Navigate to="/Minimalist_Kanban" replace />;
+		return <Navigate to="/" replace />;
 	}
 	
 	return children;
