@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { AuthContext } from "./context/AuthContext";
 
 import useLocalStorage from "use-local-storage";
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <AuthContext.Provider value={{ token, setToken }}>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/Minimalist_Kanban" element={<Navbar/>}>
             <Route index element={<Home/>}/>
@@ -32,7 +32,7 @@ function App() {
             />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </AuthContext.Provider>
   )
 }
